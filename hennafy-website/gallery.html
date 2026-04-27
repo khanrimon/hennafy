@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hennafy Studio Gallery — Browse bridal, event, and custom henna designs by Sadia Ahmed. Select your favourite design and reserve your session." />
+  <title>Gallery — Hennafy Studio | Bridal & Custom Henna Art</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION (same as homepage)
+═══════════════════════════════════════════════════════════ -->
+<nav class="nav scrolled" id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Hennafy Studio Home">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C9 2 7 4.5 7 7c0 2 1 3.5 2.5 4.5C7 13 5 15.5 5 18.5 5 21 7 22 12 22s7-1 7-3.5c0-3-2-5.5-4.5-7C16 10.5 17 9 17 7c0-2.5-2-5-5-5z"/></svg>
+        </div>
+        <span class="nav-logo-text">Hennafy</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:4438058160" class="btn btn-outline" style="padding:10px 20px;font-size:.82rem;">(443) 805-8160</a>
+        <a href="index.html#booking" class="btn btn-accent">Book Now</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav-mobile" id="mobileNav" role="dialog" aria-modal="true">
+  <a href="index.html#services" class="mobile-link">Services</a>
+  <a href="index.html#pricing" class="mobile-link">Pricing</a>
+  <a href="gallery.html" class="mobile-link">Gallery</a>
+  <a href="index.html#about" class="mobile-link">About</a>
+  <a href="index.html#faq" class="mobile-link">FAQ</a>
+  <a href="index.html#contact" class="mobile-link">Contact</a>
+  <a href="index.html#booking" class="btn btn-accent" style="margin-top:16px;">Book Your Session</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     GALLERY HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="gallery-hero" aria-labelledby="galleryTitle">
+  <div class="container">
+    <span class="section-label" data-reveal>Portfolio · @hennafy</span>
+    <h1 class="section-title" id="galleryTitle" data-reveal data-delay="1" style="margin-top:12px;">
+      The Art of Henna
+    </h1>
+    <p class="section-sub" data-reveal data-delay="2" style="margin:16px auto 0;text-align:center;">
+      Browse designs and tap <strong>"Reserve This Style"</strong> to book your session inspired by any piece.
+    </p>
+
+    <!-- Filters -->
+    <div class="gallery-filters" role="tablist" aria-label="Filter gallery by category" data-reveal data-delay="3">
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Designs</button>
+      <button class="filter-btn" data-filter="bridal" role="tab" aria-selected="false">Bridal</button>
+      <button class="filter-btn" data-filter="event" role="tab" aria-selected="false">Event</button>
+      <button class="filter-btn" data-filter="custom" role="tab" aria-selected="false">Custom</button>
+      <button class="filter-btn" data-filter="jagua" role="tab" aria-selected="false">Jagua</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     INSTAGRAM NOTE BANNER
+═══════════════════════════════════════════════════════════ -->
+<div style="background:var(--bg-2);border-bottom:1px solid var(--border);padding:14px 0;">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <p style="font-size:.85rem;color:var(--text-mid);">
+      📸 These are preview images. Replace with your actual Instagram photos from
+      <a href="https://www.instagram.com/hennafy" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;">@hennafy</a>
+      — instructions in the setup guide below.
+    </p>
+    <a href="https://www.instagram.com/hennafy" target="_blank" rel="noopener" class="btn btn-outline" style="padding:8px 18px;font-size:.8rem;flex-shrink:0;">
+      View Instagram →
+    </a>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     MASONRY GALLERY
+═══════════════════════════════════════════════════════════ -->
+<section class="gallery-full" aria-labelledby="galleryTitle">
+  <div class="container">
+
+    <div class="gallery-masonry" id="galleryGrid" role="list" aria-label="Henna design gallery">
+
+      <!-- ─── BRIDAL ─── -->
+      <div class="gallery-masonry-item"
+           data-cat="bridal"
+           data-title="Full Bridal Mehndi"
+           data-desc="Traditional full-hand bridal henna with intricate paisley and floral motifs. A complete bridal package covering both hands and wrists."
+           data-price="$45 – $65 per hand"
+           data-zone="Hand + Wrist"
+           role="listitem"
+           tabindex="0"
+           aria-label="Full Bridal Mehndi - click to view details">
+        <img src="https://images.unsplash.com/photo-1562184552-997c461e9dcb?w=600&q=80" alt="Full bridal mehndi design on both hands" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Bridal</div>
+          <div class="gallery-item-style">Full Bridal Mehndi</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="bridal"
+           data-title="Fusion Bridal Sleeve"
+           data-desc="A modern fusion of traditional Indian motifs and contemporary geometric patterns — perfect for the multicultural bride."
+           data-price="$95 – $200"
+           data-zone="Hand + Forearm"
+           role="listitem"
+           tabindex="0"
+           aria-label="Fusion Bridal Sleeve - click to view details">
+        <img src="https://images.unsplash.com/photo-1601233749202-95d04d5b3c00?w=600&q=80" alt="Fusion bridal henna sleeve design" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Bridal · Signature</div>
+          <div class="gallery-item-style">Fusion Bridal Sleeve</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="bridal"
+           data-title="Classic Mehndi Pattern"
+           data-desc="Timeless traditional mehndi covering the full hand with classic peacock, lotus, and paisley elements."
+           data-price="$35 – $45"
+           data-zone="Hand Only"
+           role="listitem"
+           tabindex="0"
+           aria-label="Classic Mehndi Pattern - click to view details">
+        <img src="https://images.unsplash.com/photo-1583073792548-cb5e97a78bd8?w=600&q=80" alt="Classic traditional mehndi pattern" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Bridal</div>
+          <div class="gallery-item-style">Classic Mehndi Pattern</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <!-- ─── EVENT ─── -->
+      <div class="gallery-masonry-item"
+           data-cat="event"
+           data-title="Festival Florals"
+           data-desc="Light, airy floral patterns perfect for festivals, bridal showers, and outdoor events. Quick to apply and beautiful all day."
+           data-price="$35 – $45"
+           data-zone="Hand Only"
+           role="listitem"
+           tabindex="0"
+           aria-label="Festival Florals - click to view details">
+        <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&q=80" alt="Floral henna pattern for festivals" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Event</div>
+          <div class="gallery-item-style">Festival Florals</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="event"
+           data-title="Corporate Event Henna"
+           data-desc="Elegant, professional designs ideal for brand activations and corporate wellness events. Fast, fun, and memorable."
+           data-price="$35 – $45"
+           data-zone="Hand Only"
+           role="listitem"
+           tabindex="0"
+           aria-label="Corporate Event Henna - click to view details">
+        <img src="https://images.unsplash.com/photo-1631552807960-e2a60b7f7d22?w=600&q=80" alt="Corporate event henna design" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Event</div>
+          <div class="gallery-item-style">Corporate Event Henna</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="event"
+           data-title="Party Henna Package"
+           data-desc="Fun, bold designs for birthday parties and celebrations. Mix of floral, geometric, and personalized elements."
+           data-price="$35 – $45"
+           data-zone="Hand Only"
+           role="listitem"
+           tabindex="0"
+           aria-label="Party Henna Package - click to view details">
+        <img src="https://images.unsplash.com/photo-1604695573706-53170668f6a6?w=600&q=80" alt="Party henna designs" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Event · Group</div>
+          <div class="gallery-item-style">Party Henna Package</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <!-- ─── CUSTOM ─── -->
+      <div class="gallery-masonry-item"
+           data-cat="custom"
+           data-title="Minimalist Wrist Wrap"
+           data-desc="A delicate, modern wrist design for the minimalist. Clean lines, subtle florals, and a touch of geometric detail."
+           data-price="$45 – $65"
+           data-zone="Hand + Wrist"
+           role="listitem"
+           tabindex="0"
+           aria-label="Minimalist Wrist Wrap - click to view details">
+        <img src="https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80" alt="Minimalist henna wrist wrap design" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Custom</div>
+          <div class="gallery-item-style">Minimalist Wrist Wrap</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="custom"
+           data-title="Full Arm Statement Piece"
+           data-desc="Our most dramatic offering — a full sleeve from fingertips to elbow. A true editorial artwork that takes 3–4 hours to complete."
+           data-price="$95 – $200"
+           data-zone="Hand + Forearm"
+           role="listitem"
+           tabindex="0"
+           aria-label="Full Arm Statement Piece - click to view details">
+        <img src="https://images.unsplash.com/photo-1556760544-74068565f05c?w=600&q=80" alt="Full arm henna sleeve design" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Custom · Signature</div>
+          <div class="gallery-item-style">Full Arm Statement Piece</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="custom"
+           data-title="Geometric Mandala"
+           data-desc="Sacred geometry meets henna in this bold palm mandala. Stunning for photography, special occasions, or just because."
+           data-price="$35 – $45"
+           data-zone="Hand Only"
+           role="listitem"
+           tabindex="0"
+           aria-label="Geometric Mandala - click to view details">
+        <img src="https://images.unsplash.com/photo-1609196957866-5f97d2551cb9?w=600&q=80" alt="Geometric mandala henna palm design" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Custom</div>
+          <div class="gallery-item-style">Geometric Mandala</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <!-- ─── JAGUA ─── -->
+      <div class="gallery-masonry-item"
+           data-cat="jagua"
+           data-title="Jagua Dark Sleeve"
+           data-desc="Jagua's rich blue-black stain creates a stunning dark sleeve that looks almost like a temporary tattoo. Lasts 2–3 weeks."
+           data-price="$95 – $200"
+           data-zone="Hand + Forearm"
+           role="listitem"
+           tabindex="0"
+           aria-label="Jagua Dark Sleeve - click to view details">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Jagua dark blue-black henna sleeve" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Jagua · Dark</div>
+          <div class="gallery-item-style">Jagua Dark Sleeve</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="jagua"
+           data-title="Jagua Floral Wrist"
+           data-desc="Delicate floral vine in Jagua's signature dark blue-black. A beautiful and bold wrist design that leaves everyone asking questions."
+           data-price="$45 – $65"
+           data-zone="Hand + Wrist"
+           role="listitem"
+           tabindex="0"
+           aria-label="Jagua Floral Wrist - click to view details">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" alt="Jagua floral wrist design" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Jagua</div>
+          <div class="gallery-item-style">Jagua Floral Wrist</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry-item"
+           data-cat="jagua"
+           data-title="Jagua Palm Mandala"
+           data-desc="A bold mandala on the palm using Jagua — a dramatic piece that creates serious impact. Shorter wear time than henna at 2–3 hours."
+           data-price="$35 – $45"
+           data-zone="Hand Only"
+           role="listitem"
+           tabindex="0"
+           aria-label="Jagua Palm Mandala - click to view details">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Jagua palm mandala design" loading="lazy"/>
+        <div class="gallery-item-overlay">
+          <div class="gallery-item-tag">Jagua</div>
+          <div class="gallery-item-style">Jagua Palm Mandala</div>
+          <button class="gallery-item-btn">Reserve This Style ✦</button>
+        </div>
+      </div>
+
+    </div><!-- /gallery-masonry -->
+
+    <!-- Load more (decorative — replace with actual pagination or Instagram embed) -->
+    <div style="text-align:center;margin-top:56px;" data-reveal>
+      <p style="font-size:.9rem;color:var(--text-light);margin-bottom:16px;">See 200+ more designs on Instagram</p>
+      <a href="https://www.instagram.com/hennafy" target="_blank" rel="noopener" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @hennafy on Instagram
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── CTA Strip ───────────────────────────────────────────── -->
+<section style="background:var(--bg-2);padding:80px 0;text-align:center;" aria-labelledby="galleryCtaTitle">
+  <div class="container">
+    <span class="section-label" data-reveal>Ready to Book?</span>
+    <h2 class="section-title" id="galleryCtaTitle" data-reveal data-delay="1" style="margin:12px auto;max-width:560px;">
+      Found a Design You Love?
+    </h2>
+    <p class="section-sub" data-reveal data-delay="2" style="margin:12px auto 32px;text-align:center;">
+      Reserve your session and mention the design name or bring a screenshot — we'll recreate it just for you.
+    </p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" data-reveal data-delay="3">
+      <a href="index.html#booking" class="btn btn-primary">Reserve Your Session</a>
+      <a href="index.html#pricing" class="btn btn-outline">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     LIGHTBOX
+═══════════════════════════════════════════════════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Design detail view">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous design">←</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next design">→</button>
+
+  <div class="lightbox-inner">
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+    <div class="lightbox-panel">
+      <div class="lightbox-tag" id="lightboxTag"></div>
+      <div class="lightbox-title" id="lightboxTitle"></div>
+      <div class="lightbox-desc" id="lightboxDesc"></div>
+
+      <div class="lightbox-price">
+        <div class="lightbox-price-label">Starting Price</div>
+        <div class="lightbox-price-val" id="lightboxPrice"></div>
+        <div style="font-size:.78rem;color:var(--text-light);margin-top:4px;" id="lightboxZone"></div>
+      </div>
+
+      <div class="lightbox-actions">
+        <a href="index.html#booking" class="lightbox-btn-book">Reserve This Style ✦</a>
+        <a href="https://www.instagram.com/hennafy" target="_blank" rel="noopener" class="lightbox-btn-insta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          See more on Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Hennafy Studio">
+          <div class="nav-logo-mark">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C9 2 7 4.5 7 7c0 2 1 3.5 2.5 4.5C7 13 5 15.5 5 18.5 5 21 7 22 12 22s7-1 7-3.5c0-3-2-5.5-4.5-7C16 10.5 17 9 17 7c0-2.5-2-5-5-5z"/></svg>
+          </div>
+          <span class="nav-logo-text" style="color:rgba(255,255,255,.9);">Hennafy</span>
+        </a>
+        <p>Premium henna artistry by Sadia Ahmed across Richmond VA, DC & Maryland.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="index.html#services">Bridal Henna</a></li>
+          <li><a href="index.html#services">Event Henna</a></li>
+          <li><a href="index.html#services">Custom Designs</a></li>
+          <li><a href="index.html#services">Consulting</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#booking">Book Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:4438058160">(443) 805-8160</a></li>
+          <li><a href="mailto:bookings@hennafy.com">bookings@hennafy.com</a></li>
+          <li><a href="https://instagram.com/hennafy" target="_blank" rel="noopener">@hennafy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 <a href="index.html">Hennafy Studio LLC</a>. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="index.html#faq">FAQ & Policies</a>
+        <a href="index.html#booking">Book Now</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
